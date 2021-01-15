@@ -8,7 +8,6 @@ import { Person } from './models'; //Person Interface
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'Sign Up';
   title = 'External Component';
   names = ['Eva Rain', 'Black', 'Cole', 'Vee'];
   persons:Person[] = [
@@ -29,7 +28,6 @@ export class AppComponent {
 
  addUser(){
    this.persons.push(this.userDetails.value)
- 
   console.log(this.userDetails.value)
  }
 
