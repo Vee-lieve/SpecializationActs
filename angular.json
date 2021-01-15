@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "SpecializationActs"
+  "defaultProject": "SpecializationActs",
+  "cli": {
+    "analytics": false
+  }
 }

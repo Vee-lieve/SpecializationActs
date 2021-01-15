@@ -1,0 +1,13 @@
+<!-- <p>{{name}}</p> -->
+<div (click)="viewDetails()">
+    <p>{{person.firstName}} {{person.lastName}}</p>
+</div>
+
+<div *ngIf="show">
+    <h4>First Name: {{person.firstName}}</h4>
+    <h4>Last Name: {{person.lastName}}</h4>
+    <h4>Age: {{person.age}}</h4>
+    <h4 *ngIf="person.nationality">Nationality: {{person.nationality}}</h4>
+    <h4>Gender: {{person.gender}}</h4>
+    <button (click)="deleteBtn()">Delete</button>
+</div>
