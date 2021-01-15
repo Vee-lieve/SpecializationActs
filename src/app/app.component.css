@@ -36,13 +36,14 @@ label {
 }
 
 input {
-    /* margin-left: 34rem; */
     height: 1.5rem;
     width: 14rem;
 }
 
 button {
-    margin-left: 4rem;
+    float: right;
     height: 2rem;
+    width: 6rem;
+    font-weight: bold;
     background-color: lightskyblue;
 }

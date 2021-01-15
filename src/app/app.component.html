@@ -52,10 +52,16 @@
  -->
 
  <h1>{{title}}</h1>
- <div *ngFor="let person of persons">
-     <app-external [person]="person" (newPerson)="deleteBtn($event)" (update)="updateBtn($event)"></app-external>
+
+ <app-update *ngIf="isHidden"></app-update>
+ <br><br>
+ 
+ <div *ngIf="!isHidden">
+    <div *ngFor="let person of persons">
+        <app-external [person]="person" (newPerson)="deleteBtn($event)" (update)="updateBtn($event)"></app-external>
+    </div>
  </div>
- <form *ngIf="!isHidden" [formGroup]="userDetails" (ngSubmit)="addUser()">
+ <form  [formGroup]="userDetails" (ngSubmit)="addUser()">
      <label>
          First Name: 
          <input type="text" formControlName="firstName">
@@ -83,6 +89,6 @@
      <button type="submit">Add Person</button>
  </form>
  
- <app-update *ngIf="isHidden"></app-update>
+ 
  
  <!-- <app-registration></app-registration> -->

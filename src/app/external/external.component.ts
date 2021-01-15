@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Person } from '../models';
 
 @Component({
@@ -6,15 +6,13 @@ import { Person } from '../models';
   templateUrl: './external.component.html',
   styleUrls: ['./external.component.css']
 })
-export class ExternalComponent implements OnInit {
+export class ExternalComponent {
   // @Input() name = '';
   @Input() person:Person;
   @Output() newPerson = new EventEmitter();
   @Output() update = new EventEmitter();
-  ngOnInit(): void {
-  }
+
   show = false;
-  ishidden = false;
 
   viewDetails() {
     this.show = !this.show;
@@ -26,7 +24,7 @@ export class ExternalComponent implements OnInit {
     console.log(this.person.firstName)
   }
 
-  updateBtn(item : any) {
-    this.update.emit(item)
+  updateBtn(person) {
+    this.update.emit(person)
   }
 }

@@ -23,7 +23,7 @@ export class AppComponent {
     nationality: [''],
     gender: ['']
   })
-  isHidden = false;
+  isHidden  = false;
 
   constructor(private fb: FormBuilder) { }
 
@@ -40,7 +40,9 @@ export class AppComponent {
   }
 
   updateBtn() {
+   
     this.isHidden = !this.isHidden;
+    console.log(this.isHidden);
   }
 
 

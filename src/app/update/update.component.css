@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+label {
+    display: block;
+    width: 10rem;
+    margin: 0.7rem 0;
+    font-weight: bold;
+}
+
+input {
+    height: 1.5rem;
+    width: 14rem;
+}
+
+button {
+    float: right;
+    margin-left: 0.5rem;
+    height: 2rem;
+    width: 4rem;
+    font-weight: bold;
+    /* font-size: 15px; */
+    background-color: lightskyblue;
+}

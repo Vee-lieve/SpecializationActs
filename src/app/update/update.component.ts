@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-update',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
+  @Output() updatedPerson = new EventEmitter;
 
   constructor() { }
 
