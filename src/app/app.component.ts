@@ -23,16 +23,24 @@ export class AppComponent {
     nationality: [''],
     gender: ['']
   })
+  isHidden = false;
 
   constructor(private fb: FormBuilder) { }
 
  addUser(){
    this.persons.push(this.userDetails.value)
   console.log(this.userDetails.value)
+  this.userDetails.reset();
  }
 
-  deleteBtn(i){
-    this.persons.splice(this.persons.findIndex(x => x.firstName == i),1)
+  deleteBtn(i : any){
+    this.persons.splice(this.persons.findIndex(x => x.firstName === i),1)
+    // let index = this.persons.findIndex(x => x.firstName == i);
+    // this.persons.splice(index, 1);
+  }
+
+  updateBtn() {
+    this.isHidden = !this.isHidden;
   }
 
 

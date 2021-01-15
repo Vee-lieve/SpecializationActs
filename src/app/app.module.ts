@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ExternalComponent } from './external/external.component';
 import { SampleComponent } from './sample/sample.component';
 import { InternalComponent } from './internal/internal.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExternalComponent,
     SampleComponent,
-    InternalComponent
+    InternalComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

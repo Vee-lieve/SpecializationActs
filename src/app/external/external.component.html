@@ -1,13 +1,16 @@
 <!-- <p>{{name}}</p> -->
 <div (click)="viewDetails()">
-    <p>{{person.firstName}} {{person.lastName}}</p>
+    <p>{{person.firstName}} {{person.lastName}}
+        <button (click)="deleteBtn()">DELETE</button>
+        <button (click)="updateBtn()">UPDATE</button>
+    </p>
 </div>
 
 <div *ngIf="show">
-    <h4>First Name: {{person.firstName}}</h4>
-    <h4>Last Name: {{person.lastName}}</h4>
-    <h4>Age: {{person.age}}</h4>
-    <h4 *ngIf="person.nationality">Nationality: {{person.nationality}}</h4>
-    <h4>Gender: {{person.gender}}</h4>
-    <button (click)="deleteBtn()">Delete</button>
+    <h3>First Name: {{person.firstName}}</h3>
+    <h3>Last Name: {{person.lastName}}</h3>
+    <h3>Age: {{person.age}}</h3>
+    <h3 *ngIf="person.nationality">Nationality: {{person.nationality}}</h3>
+    <h3>Gender: {{person.gender}}</h3>
+    
 </div>

@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Person } from '../models';
-// import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-external',
@@ -8,17 +7,14 @@ import { Person } from '../models';
   styleUrls: ['./external.component.css']
 })
 export class ExternalComponent implements OnInit {
-  @Input() name = '';
+  // @Input() name = '';
   @Input() person:Person;
-  @Output() newPerson = new EventEmitter<Person>();
+  @Output() newPerson = new EventEmitter();
+  @Output() update = new EventEmitter();
   ngOnInit(): void {
   }
   show = false;
-
-
-  // constructor(
-  //   private app: AppComponent
-  // ){}
+  ishidden = false;
 
   viewDetails() {
     this.show = !this.show;
@@ -26,9 +22,11 @@ export class ExternalComponent implements OnInit {
   }
 
   deleteBtn() {
-    // this.app.deleteBtn(this.person.firstName)
-    this.newPerson.emit(this.person);
+    this.newPerson.emit(this.person.firstName);
+    console.log(this.person.firstName)
+  }
 
-    console.log(this.person)
+  updateBtn(item : any) {
+    this.update.emit(item)
   }
 }
