@@ -8,17 +8,27 @@ import { Person } from '../models';
 })
 export class UpdateComponent {
   @Input() updateInfo: Person;
+  // @Input() firstName = "";
+  // @Input() lastName = "";
+  // @Input() age = "";
+  // @Input() nationality = "";
+  // @Input() gender = "";
   @Output() update = new EventEmitter;
   @Output() updatedPerson = new EventEmitter;
+  @Output() updateDetails = new EventEmitter;
 
   constructor() { }
 
   updateBtn() {
-    this.updatedPerson.emit(this.updateInfo.firstName);
+    this.updatedPerson.emit(this.updateInfo);
+    // console.log("okay")
   }
 
-  onSubmit() {
-    alert("Form Submitted");
+  onSubmit(value : any) {
+    // alert("Form Submitted");
+    this.updateDetails.emit(value);
+    console.log(value, "okay")
+
   }
 
   cancelBtn() {

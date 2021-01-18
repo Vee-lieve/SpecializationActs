@@ -39,60 +39,20 @@ export class AppComponent {
     let index = this.persons.findIndex(x => x.firstName == i);
     this.persons.splice(index, 1);
   }
+
   index;
-  updateBtn(value : any) {
+  updateBtn(value : Person) {
     this.isHidden = !this.isHidden;
     console.log(this.isHidden);
     this.index = value;
     console.log(this.index)
+    // this.isHidden = !this.isHidden;
 
   }
 
-
-  //Activity 5
-  
-  // names = ["Eva Rain", "Belle", "Cole", "Black", "Midnight"];
-  // newName = "";
-  
-  // addName() {
-  //   this.names.push(this.newName)
-  //   this.newName = "";
-  // }
-
-  // firstNameA = '';
-  // lastNameA = '';
-  // fullName = '';
-  // Age = '';
-  // curAge = '';
-
-  // getFullName(event : Event) {
-  //   this.fullName = String(event);
-  // }
-  // getcurAge(event : Event) {
-  //     this.curAge = String(event);
-  //   }
-
-  // isActive = true;
-  // name = "";
-  // defaultName = "Vanz";
-  
-  // imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2YoYm_znkDTYKfIxmIwSk0WKHcpUmtvpV9A&usqp=CAU";
-  // image = "https://pm1.narvii.com/6278/de797c2c623314526f8c9c21b066ad099f4fcb89_00.jpg";
-
-  // sayHi(){
-  //   alert("Hi");
-  // }
-
-  // inputs() {
-  //   if (this.name === this.defaultName) {
-  //     alert("The same");
-  //   } 
-  //   else {
-  //   }
-  //   this.reset();
-  // }
-  // reset(){
-  //   this.name = "";
-  // }
+  onSubmit(key : any) {
+    let i = this.persons.findIndex(x => x.firstName == key);
+    this.persons[i] 
+  }
 }
  
