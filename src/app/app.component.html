@@ -1,57 +1,4 @@
-<!-- <h1>{{title}}</h1>
-<app-internal></app-internal> -->
-
-<!--event binding-->
-<!-- <button [class.active]="isActive">Button</button> -->
-<!-- <button [disabled]="isActive">Button</button> -->
-<!--property binding--> 
-<!-- <img [src]="imageUrl"/>
-<img bind-src = "image"/> -->
-
-<!--two-way binding-->
-<!-- <input type="text" [(ngModel)]="name">
-<br><br>
-<button (click)="inputs()">Submit</button> 
-<button [disabled]="name === ''" (click)="reset()">Reset</button> 
-
-<h4>{{defaultName}}</h4> -->
-
-<!-- <div class="container">
-    <h1>{{title}}</h1>
-    <br>
-    <label for="firstNameA">First Name : </label>
-    <input type="text" [(ngModel)]="firstNameA">
-    <br><br>
-    <label for="lastname">Last Name : </label>
-    <input type="text" [(ngModel)]="lastNameA">
-    <br><br>
-    <label for="Age">Age : </label>
-    <input type="text" [(ngModel)]="Age">
-</div>
-<app-sample
-[firstNameS]="firstNameA"
-[lastNameS]="lastNameA"
-[ageS]="Age"
-(fullName)="getFullName($event)"
-(curAge)="getcurAge($event)"
-></app-sample>
-<div class="output">
-    <h3>Full Name : {{fullName}}</h3>
-    <h3>Current Age : {{curAge}}</h3>    
-</div> -->
-
-<!--Act 5-->
-<!-- <h1>{{title}}</h1>
-<div *ngIf="names.length>3">
-    <div *ngFor="let name of names">
-        <app-external [name]="name"></app-external>
-    </div>
-</div>
-<input type="text" [(ngModel)]="newName">
-<button (click)="addName()">Add Name</button>
- -->
-
- <h1>{{title}}</h1>
+<h1>{{title}}</h1>
 
  <app-update *ngIf="isHidden"></app-update>
  <br><br>
@@ -92,3 +39,4 @@
  
  
  <!-- <app-registration></app-registration> -->
+ <!-- <app-api></app-api> -->

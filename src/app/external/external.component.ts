@@ -7,7 +7,6 @@ import { Person } from '../models';
   styleUrls: ['./external.component.css']
 })
 export class ExternalComponent {
-  // @Input() name = '';
   @Input() person:Person;
   @Output() newPerson = new EventEmitter();
   @Output() update = new EventEmitter();
