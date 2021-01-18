@@ -1,32 +1,36 @@
 <div class="container">
-    <form #updateForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #updateForm="ngForm">
         <div class="form-group">
-            <label>
-                First Name: 
-                <input type="text">
+            <label for="firstName">
+                First Name:
             </label>
-        
-            <label>
-                Last Name: 
-                <input type="text">
-            </label>
-        
-            <label>
-                Age: 
-                <input type="text">
-            </label>
-        
-             <label>
-                Nationality: 
-                <input type="text">
-            </label>
-        
-            <label>
-                Gender: 
-                <input type="text">
-            </label>
-            <button>Save</button>
-            <button>Cancel</button>
+            <input type="text" class="form-control" id="firstName" [(ngModel)]="updateInfo.firstName">
         </div>
+        <div class="form-group">
+            <label for="lastName">
+                Last Name:
+            </label>
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="updateInfo.lastName">
+        </div>
+        <div class="form-group">
+            <label for="age">
+                Age:
+            </label>
+            <input type="text" class="form-control" id="age" [(ngModel)]="updateInfo.age">
+        </div>
+        <div class="form-group">
+            <label for="nationality">
+                Nationality:
+            </label>
+            <input type="text" class="form-control" id="nationality" [(ngModel)]="updateInfo.nationality">
+        </div>
+        <div class="form-group">
+            <label for="gender">
+                Gender:
+            </label>
+            <input type="text" class="form-control" id="gender" [(ngModel)]="updateInfo.gender">
+        </div>
+        <button>Save</button>
+        <button type="reset" (click)="cancelBtn()">Cancel</button>
     </form>
 </div>

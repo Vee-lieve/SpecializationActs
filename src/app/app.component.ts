@@ -25,6 +25,7 @@ export class AppComponent {
   })
   isHidden  = false;
 
+
   constructor(private fb: FormBuilder) { }
 
  addUser(){
@@ -34,15 +35,17 @@ export class AppComponent {
  }
 
   deleteBtn(i : any){
-    this.persons.splice(this.persons.findIndex(x => x.firstName === i),1)
-    // let index = this.persons.findIndex(x => x.firstName == i);
-    // this.persons.splice(index, 1);
+    // this.persons.splice(this.persons.findIndex(x => x.firstName === i),1)
+    let index = this.persons.findIndex(x => x.firstName == i);
+    this.persons.splice(index, 1);
   }
-
-  updateBtn() {
-   
+  index;
+  updateBtn(value : any) {
     this.isHidden = !this.isHidden;
     console.log(this.isHidden);
+    this.index = value;
+    console.log(this.index)
+
   }
 
 
