@@ -1,6 +1,6 @@
-<!-- <h1>{{title}}</h1>
+<h1>{{title}}</h1>
 
- <app-update *ngIf="isHidden"></app-update>
+ <app-update *ngIf="isHidden" [firstName]="index.firstName" [lastName]="index.lastName" [age]="index.age" [nationality]="index.nationality" [gender]="index.gender"  (updateDetails)="onSubmit($event)"></app-update>
  <br><br>
  
  <div *ngIf="!isHidden">
@@ -34,8 +34,7 @@
          <input type="text" formControlName="gender">
      </label>
      <button type="submit">Add Person</button>
- </form> -->
- 
+ </form>
  
  
  <!-- <app-registration></app-registration> -->
