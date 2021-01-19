@@ -49,9 +49,9 @@ export class AppComponent {
 
   }
 
-  onSubmit(key : any) {
-    let i = this.persons.findIndex(x => x.firstName === key);
-    this.persons[i];
+  onSubmit(value : any) {
+    let i = this.persons.findIndex(x => x === this.index);
+    this.persons[i] = value;
     console.log(i, "app");
     this.isHidden = !this.isHidden;
   }

@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
 })
 export class UpdateComponent {
   @Input() updateInfo: Person;
+  @Input() firstName = "";
+  @Input() lastName ="";
+  @Input() age = "";
+  @Input() gender="";
+  @Input() nationality="";
   @Output() update = new EventEmitter;
   @Output() updatedPerson = new EventEmitter;
   @Output() updateDetails = new EventEmitter;
@@ -24,6 +29,7 @@ export class UpdateComponent {
   onSubmit(value : any) {
     this.updateDetails.emit(value);
     console.log(value, "update");
+
     // setTimeout(() => {
     //   this.router.navigate(['/api'])
     //       }, 3000)

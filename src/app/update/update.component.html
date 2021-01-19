@@ -1,36 +1,36 @@
 <div class="container">
-    <form (ngSubmit)="onSubmit(updateForm.value)" #updateForm="ngForm">
+    <form  #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm.value)">
         <div class="form-group">
             <label for="firstName">
                 First Name:
             </label>
-            <input type="text" class="form-control" id="firstName">
+            <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="firstName">
         </div>
         <div class="form-group">
             <label for="lastName">
                 Last Name:
             </label>
-            <input type="text" class="form-control" id="lastName">
+            <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="lastName">
         </div>
         <div class="form-group">
             <label for="age">
                 Age:
             </label>
-            <input type="text" class="form-control" id="age">
+            <input type="text" class="form-control" id="age" name="age" [(ngModel)]="age">
         </div>
         <div class="form-group">
             <label for="nationality">
                 Nationality:
             </label>
-            <input type="text" class="form-control" id="nationality">
+            <input type="text" class="form-control" id="nationality" name="nationality" [(ngModel)]="nationality">
         </div>
         <div class="form-group">
             <label for="gender">
                 Gender:
             </label>
-            <input type="text" class="form-control" id="gender">
+            <input type="text" class="form-control" id="gender" name="gender" [(ngModel)]="gender">
         </div>
-        <button>Save</button>
+        <button type="submit">Save</button>
         <button>Cancel</button>
     </form>
 </div>
