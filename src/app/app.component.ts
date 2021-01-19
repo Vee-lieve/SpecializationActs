@@ -51,7 +51,7 @@ export class AppComponent {
   }
 
   onSubmit(key : any) {
-    let i = this.persons.findIndex(x => x.firstName == key);
+    let i = this.persons.findIndex(x => x.firstName === key);
     this.persons[i] 
   }
 }
