@@ -1,5 +1,6 @@
 import { Component,Input,Output,EventEmitter } from '@angular/core';
 import { Person } from '../models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update',
@@ -8,32 +9,30 @@ import { Person } from '../models';
 })
 export class UpdateComponent {
   @Input() updateInfo: Person;
-  // @Input() firstName = "";
-  // @Input() lastName = "";
-  // @Input() age = "";
-  // @Input() nationality = "";
-  // @Input() gender = "";
+  @Input() firstName = "";
+  @Input() lastName ="";
+  @Input() age = "";
+  @Input() gender="";
+  @Input() nationality="";
   @Output() update = new EventEmitter;
   @Output() updatedPerson = new EventEmitter;
   @Output() updateDetails = new EventEmitter;
 
-  constructor() { }
+  show = false;
+  
+  constructor(private router:Router) { }
 
   updateBtn() {
     this.updatedPerson.emit(this.updateInfo);
-    // console.log("okay")
   }
 
   onSubmit(value : any) {
-    // alert("Form Submitted");
     this.updateDetails.emit(value);
-    console.log(value, "okay")
+    console.log(value, "update");
+
+    // setTimeout(() => {
+    //   this.router.navigate(['/api'])
+    //       }, 3000)
 
   }
-
-  cancelBtn() {
-    console.log("Naclick");
-  }
-
-
 }
