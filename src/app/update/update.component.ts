@@ -1,5 +1,6 @@
 import { Component,Input,Output,EventEmitter } from '@angular/core';
 import { Person } from '../models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update',
@@ -17,7 +18,7 @@ export class UpdateComponent {
   @Output() updatedPerson = new EventEmitter;
   @Output() updateDetails = new EventEmitter;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   updateBtn() {
     this.updatedPerson.emit(this.updateInfo);
@@ -28,9 +29,11 @@ export class UpdateComponent {
     // alert("Form Submitted");
     this.updateDetails.emit(value);
     console.log(value, "okay")
+    setTimeout(() => {
+      this.router.navigate(['/api'])
+          }, 3000)
 
   }
-
   cancelBtn() {
     console.log("Naclick");
   }

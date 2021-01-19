@@ -36,8 +36,6 @@ export class ApiComponent implements OnInit {
   }
 }
 
-
-
 // export interface Post {
 //   userId?:number;
 //   id?:number;
