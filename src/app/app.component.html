@@ -1,6 +1,6 @@
-<!-- <h1>{{title}}</h1>
+<h1>{{title}}</h1>
 
- <app-update *ngIf="isHidden"></app-update>
+ <app-update *ngIf="isHidden" (updateDetails)="onSubmit($event)"></app-update>
  <br><br>
  
  <div *ngIf="!isHidden">
@@ -34,7 +34,7 @@
          <input type="text" formControlName="gender">
      </label>
      <button type="submit">Add Person</button>
- </form> -->
+ </form>
  
  
  
@@ -42,8 +42,8 @@
  <!-- <app-api></app-api> -->
 
  <!--Routing-->
- <h1>{{title}}</h1>
+ <!-- <h1>{{title}}</h1>
  <button routerLink="/api">API</button>
  <button routerLink="/reactive">Reactive Form</button>
  <button routerLInk="/update">Template Form</button>
- <router-outlet></router-outlet>
+ <router-outlet></router-outlet> -->

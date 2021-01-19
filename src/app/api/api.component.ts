@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {User } from '../models';
 
 @Component({
   selector: 'app-api',
@@ -34,36 +35,4 @@ export class ApiComponent implements OnInit {
   getUsers() {
     return this.http.get(this.url);
   }
-}
-
-// export interface Post {
-//   userId?:number;
-//   id?:number;
-//   title:string;
-//   body:string;
-// }
-
-export interface User {
-  id? : number;
-  name : string;
-  username : string;
-  email : string;
-  address : [{
-    street : string; 
-    suite : string;
-    city : string;
-    zipcode : number;
-    geo : {
-      lat : number;
-      lng : number;
-    }
-  }];
-  phone : string;
-  website : string;
-  company : [{
-    name : string;
-    catchPhrase : string;
-    bs : string;
-  }];
-
 }

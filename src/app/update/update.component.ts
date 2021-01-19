@@ -9,34 +9,24 @@ import { Router } from '@angular/router';
 })
 export class UpdateComponent {
   @Input() updateInfo: Person;
-  // @Input() firstName = "";
-  // @Input() lastName = "";
-  // @Input() age = "";
-  // @Input() nationality = "";
-  // @Input() gender = "";
   @Output() update = new EventEmitter;
   @Output() updatedPerson = new EventEmitter;
   @Output() updateDetails = new EventEmitter;
 
+  show = false;
+  
   constructor(private router:Router) { }
 
   updateBtn() {
     this.updatedPerson.emit(this.updateInfo);
-    // console.log("okay")
   }
 
   onSubmit(value : any) {
-    // alert("Form Submitted");
     this.updateDetails.emit(value);
-    console.log(value, "okay")
-    setTimeout(() => {
-      this.router.navigate(['/api'])
-          }, 3000)
+    console.log(value, "update");
+    // setTimeout(() => {
+    //   this.router.navigate(['/api'])
+    //       }, 3000)
 
   }
-  cancelBtn() {
-    console.log("Naclick");
-  }
-
-
 }
