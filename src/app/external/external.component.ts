@@ -23,7 +23,8 @@ export class ExternalComponent {
     console.log(this.person.firstName)
   }
 
-  updateBtn(person) {
-    this.update.emit(person)
+  updateBtn() {
+    this.update.emit(this.person)
+    console.log("updatenicya")
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-api',
@@ -13,7 +14,10 @@ export class ApiComponent implements OnInit {
   private url = "https://jsonplaceholder.typicode.com/users";
   users: User[];
   
-  constructor(private http:HttpClient) { } //instantiate object of type HttpClient
+  constructor(
+    // private http:HttpClient,
+    private apiService : ApiService
+    ) { } //instantiate object of type HttpClient
 
   ngOnInit(): void { //Component life cycle which executes everytime the component is created
     // this.getPosts().subscribe(posts => { //posts is called an observer
@@ -21,9 +25,14 @@ export class ApiComponent implements OnInit {
     //   this.posts = posts as Post[];
     // }) //Assigned the value to this variable
 
-    this.getUsers().subscribe(users => {
-      console.log(users)
-      this.users = users as User[];
+    // this.getUsers().subscribe(users => {
+    //   console.log(users)
+    //   this.users = users as User[];
+    // });
+
+    this.apiService.getData(this.url).subscribe(data => {
+      console.log(data);
+      
     })
   }
 
@@ -31,9 +40,9 @@ export class ApiComponent implements OnInit {
   //   return this.http.get(this.url); //return the url declared above
   // }
 
-  getUsers() {
-    return this.http.get(this.url);
-  }
+  // getUsers() {
+  //   return this.http.get(this.url);
+  // }
 }
 
 

@@ -45,14 +45,13 @@ export class AppComponent {
     this.isHidden = !this.isHidden;
     console.log(this.isHidden);
     this.index = value;
-    console.log(this.index);
-
+    console.log(this.index, "updatebtninApp");
   }
 
   onSubmit(value : any) {
     let i = this.persons.findIndex(x => x === this.index);
     this.persons[i] = value;
-    console.log(i, "app");
+    console.log(value, "app");
     this.isHidden = !this.isHidden;
   }
 }

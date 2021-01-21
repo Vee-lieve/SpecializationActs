@@ -14,21 +14,25 @@ export class UpdateComponent {
   @Input() age = "";
   @Input() gender="";
   @Input() nationality="";
-  @Output() update = new EventEmitter;
-  @Output() updatedPerson = new EventEmitter;
+  // @Output() update = new EventEmitter;
+  // @Output() updatedPerson = new EventEmitter;
   @Output() updateDetails = new EventEmitter;
 
   show = false;
   
-  constructor(private router:Router) { }
+  // constructor(private router:Router) { }
 
-  updateBtn() {
-    this.updatedPerson.emit(this.updateInfo);
-  }
+  // updateBtn() {
+  //   this.updatedPerson.emit(this.updateInfo);
+  //   console.log(this.updateInfo, "updateInfo")
+  // }
+
+
+  //Submit Data
 
   onSubmit(value : any) {
     this.updateDetails.emit(value);
-    console.log(value, "update");
+    console.log(value, "updatedData");
 
     // setTimeout(() => {
     //   this.router.navigate(['/api'])
